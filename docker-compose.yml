@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+
+  mongo-db:
+    image: tutum/mongodb
+    container_name: mongo-db
+    environment:
+      AUTH: "no"
+    volumes:
+      - "/data/db"
+    ports:
+      - "8081:8081"
+      - "28017:28017"
